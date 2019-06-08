@@ -1,5 +1,5 @@
 # perfy
-Perfy - a lightweight profiling tool
+Perfy - a lightweight profiling tool for Python
 
 Mark your functions and methods as trace-enabled with **@perfy** decorator:
 ```python
