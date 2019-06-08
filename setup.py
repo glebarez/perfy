@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'perfy',         
   packages = ['perfy'],  
-  version = '0.22',     
+  version = '0.23',     
   license='MIT',      
   description = 'Perfy - a lightweight performance tracer for python',
   author = 'Gleb Sakhnov',                   
   author_email = 'gleb.sakhnov@gmail.com',    
   url = 'https://github.com/glebarez/perfy',   
-  download_url = 'https://github.com/glebarez/perfy/archive/0.22.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/glebarez/perfy/archive/0.23.tar.gz',
   keywords = ['profiling', 'trace', 'runtime', 'analysis'],
   install_requires=[],
   classifiers=[
