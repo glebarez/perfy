@@ -7,7 +7,7 @@ Mark your functions and methods as trace-enabled with **@perfy** decorator:
 def trace_this_function():
     # do something
 ```
-Also, you can trace certain blocks of your code using **with** statement:
+Also, you can trace arbitrary blocks of your code using **with** statement:
 ```python
 with perfy('name of your choice'):
     # your code here
