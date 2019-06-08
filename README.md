@@ -23,15 +23,14 @@ perfy.report()
 from time import sleep
 from perfy import perfy
 
-
 @perfy # <-- use decorator to track function calls
 def func_sleep():
     sleep(.02)
     
 
 def sleep_loop():
-    for _ in range(10):
-        with perfy('sleep loop body'): # <-- use with-statement to track arbitrary block of code
+    with perfy('sleep loop'): # <-- use with-statement to track arbitrary block of code
+        for _ in range(10):
             func_sleep()
 
 # you can nest with-blocks and decorated function calls in any order:
@@ -41,22 +40,22 @@ def main():
 
     with perfy('custom named block'): # <-- traced block
         sleep(.1)
-        
+
         with perfy('inner block'): # <-- nested traced block
             func_sleep()
-            func_sleep()
+            func_sleep() 
 ```
 For above code perfy.report() will output:
 ```
 ----------------------------------Perfy report----------------------------------
             Function/Method                  Time(sec.)         Calls(count)    
 --------------------------------------------------------------------------------
-main                                           0.359                 1          
-   └ sleep loop body                           0.213                 10         
-      └ func_sleep                             0.213                 10         
-   └ custom named block                        0.146                 1          
+main                                           0.350                 1          
+   └ sleep loop                                0.206                 1          
+      └ func_sleep                             0.205                 10         
+   └ custom named block                        0.144                 1          
       └ inner block                            0.043                 1          
-         └ func_sleep                          0.043                 2          
+         └ func_sleep                          0.042                 2          
 --------------------------------------------------------------------------------
 ```
 

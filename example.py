@@ -8,8 +8,8 @@ def func_sleep():
     
 
 def sleep_loop():
-    for _ in range(10):
-        with perfy('sleep loop body'): # <-- use with-statement to track arbitrary block of code
+    with perfy('sleep loop'): # <-- use with-statement to track arbitrary block of code
+        for _ in range(10):
             func_sleep()
 
 # you can nest with-blocks and decorated function calls in any order:
@@ -19,10 +19,10 @@ def main():
 
     with perfy('custom named block'): # <-- traced block
         sleep(.1)
-        
+
         with perfy('inner block'): # <-- nested traced block
             func_sleep()
-            func_sleep()
+            func_sleep() 
                 
 if __name__ == '__main__':
     # run top-level function
