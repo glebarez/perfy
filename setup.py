@@ -1,10 +1,16 @@
 from distutils.core import setup
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
   name = 'perfy',         
   packages = ['perfy'],  
   version = '0.24',     
   license='MIT',      
   description = 'Perfy - a lightweight performance tracer for python',
+  long_description = long_description,
+  long_description_content_type = "text/markdown",
   author = 'Gleb Sakhnov',                   
   author_email = 'gleb.sakhnov@gmail.com',    
   url = 'https://github.com/glebarez/perfy',   
