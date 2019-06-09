@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setup(
     name='perfy',
     packages=['perfy'],
-    version='0.25',
+    version='0.26',
     license='MIT',
     description='Perfy - a lightweight performance tracer for python',
     long_description=long_description,
@@ -14,9 +14,9 @@ setup(
     author='Gleb Sakhnov',
     author_email='gleb.sakhnov@gmail.com',
     url='https://github.com/glebarez/perfy',
-    download_url='https://github.com/glebarez/perfy/archive/0.25.tar.gz',
     keywords=['profiling', 'trace', 'runtime', 'analysis'],
     install_requires=[],
+    python_requires='>=3.2',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
