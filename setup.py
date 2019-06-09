@@ -14,7 +14,7 @@ setup(
     author='Gleb Sakhnov',
     author_email='gleb.sakhnov@gmail.com',
     url='https://github.com/glebarez/perfy',
-    download_url='https://github.com/glebarez/perfy/archive/0.24.tar.gz',
+    download_url='https://github.com/glebarez/perfy/archive/0.25.tar.gz',
     keywords=['profiling', 'trace', 'runtime', 'analysis'],
     install_requires=[],
     classifiers=[
