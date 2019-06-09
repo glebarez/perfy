@@ -12,11 +12,15 @@ from time import perf_counter
 from functools import wraps
 from copy import deepcopy
 
-__version__ = '0.25'
+__version__ = '0.26'
 
 class Perfy():
     '''Perfy - a simple performance tracer
     see module-level docstring for detailed usage'''
+    
+    # repeat version to be accessible in case of perfy module import-hidden behind perfy instance
+    __version__ = __version__
+
     def __init__(self):
         self._stack = {}       # stack of calls, with traced numbers
         self._sp = self._stack # set current stack pointer
@@ -68,12 +72,12 @@ class Perfy():
     def report(self):
         print('{0:-^80}'.format('Perfy report'))
         print('{:^40}{:^20}{:^20}'.format('Function/Method', 'Time(sec.)', 'Calls(count)'))
-        print(f'{"":-^80}')
+        print('{:-^80}'.format(''))
         if self._stack:
             self._report(deepcopy(self._stack), level = 0)
         else:
-            print(f'{"Empty":^80}')
-        print(f'{"":-^80}\n')
+            print('{:^80}'.format('Empty'))
+        print('{:-^80}'.format(''))
     
     # inner recursive implementation of report prinitng
     def _report(self, stack, level):
