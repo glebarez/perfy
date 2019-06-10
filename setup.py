@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setup(
     name='perfy',
     packages=['perfy'],
-    version='0.26',
+    version='0.27',
     license='MIT',
     description='Perfy - a lightweight performance tracer for python',
     long_description=long_description,

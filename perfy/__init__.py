@@ -12,7 +12,7 @@ from time import perf_counter
 from functools import wraps
 from copy import deepcopy
 
-__version__ = '0.26'
+__version__ = '0.27'
 
 class Perfy():
     '''Perfy - a simple performance tracer
