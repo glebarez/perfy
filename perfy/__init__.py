@@ -75,7 +75,7 @@ class Perfy():
     # prints a report
     def report(self):
         print('\n{0:-^80}\n'.format(' Perfy report '))
-        print('{:^35}{:^15}{:^15}{:^15}'.format('Function/Method', 'Time(sec.)', 'Calls(count)', 'Avg(sec.)'))
+        print('{:^35}{:>15}{:>15}{:>15}'.format('Function/Method', 'Time(sec.)', 'Calls(count)', 'Avg(sec.)'))
         print('{:-^80}'.format(''))
         if self._stack:
             self._report(deepcopy(self._stack), level = 0)

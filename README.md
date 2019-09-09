@@ -47,15 +47,15 @@ def main():
 ```
 For above code perfy.report() will output:
 ```
-----------------------------------Perfy report----------------------------------
-            Function/Method                  Time(sec.)         Calls(count)    
+--------------------------------- Perfy report ---------------------------------
+
+          Function/Method               Time(sec.)   Calls(count)      Avg(sec.)
 --------------------------------------------------------------------------------
-main                                           0.350                 1          
-   └ sleep loop                                0.206                 1          
-      └ func_sleep                             0.205                 10         
-   └ custom named block                        0.144                 1          
-      └ inner block                            0.043                 1          
-         └ func_sleep                          0.042                 2          
+main                                         0.343              1          0.343
+   └ sleep loop                              0.203              1          0.203
+      └ func_sleep                           0.203             10          0.020
+   └ custom named block                      0.141              1          0.141
+      └ inner block                          0.041              1          0.041
+         └ func_sleep                        0.040              2          0.020
 --------------------------------------------------------------------------------
-```
 
