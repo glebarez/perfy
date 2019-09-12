@@ -8,9 +8,9 @@ Moreover, perfy.report() prints out a formatted view, showing call stack of trac
 """
 
 from contextlib import contextmanager
-from time import perf_counter
-from functools import wraps
 from copy import deepcopy
+from functools import wraps
+from time import perf_counter
 
 __version__ = '0.28'
 
