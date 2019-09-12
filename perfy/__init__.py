@@ -85,7 +85,7 @@ class Perfy():
     
     # inner recursive implementation of report prinitng
     def _report(self, stack, level):
-        for name, stats in sorted(stack.items(), key = lambda x:x[1]['#'], reverse = True):
+        for name, stats in sorted(stack.items(), key = lambda x:x[1][_TIME], reverse = True):
             _time = stats.pop(_TIME)
             _count = stats.pop(_COUNT)
             _avg = round(_time/_count,3) if _count else 0
